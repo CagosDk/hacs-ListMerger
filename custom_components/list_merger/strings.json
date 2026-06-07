@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up List Merger",
+        "description": "Create a merged master todo list from multiple sources.",
+        "data": {
+          "master_name": "Merger name",
+          "master_type": "Master list type",
+          "duplicate_handling": "Duplicate handling",
+          "completed_behavior": "When an item is completed on master"
+        },
+        "data_description": {
+          "master_name": "Name shown in Home Assistant for this merger (and for the new list if created).",
+          "delete_on_merge": "Remove the item from the source list after it is added to the master list."
+        }
+      },
+      "existing_master": {
+        "title": "Select master list",
+        "description": "Choose an existing todo list to act as the master list.",
+        "data": {
+          "master_entity_id": "Master list"
+        }
+      },
+      "select_sources": {
+        "title": "Select source lists",
+        "description": "Choose which todo lists to merge into the master list.",
+        "data": {
+          "source_entities": "Source lists"
+        }
+      },
+      "configure_source": {
+        "title": "Configure source: {entity_id}",
+        "description": "Set how **{entity_id}** syncs with the master list.",
+        "data": {
+          "direction": "Sync direction",
+          "delete_on_merge": "Delete from source after adding to master"
+        }
+      }
+    },
+    "error": {
+      "no_sources": "Please select at least one source list."
+    },
+    "abort": {
+      "already_configured": "This merger is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update List Merger settings",
+        "data": {
+          "source_entities": "Source lists",
+          "duplicate_handling": "Duplicate handling",
+          "completed_behavior": "When an item is completed on master"
+        }
+      },
+      "configure_source": {
+        "title": "Configure source: {entity_id}",
+        "description": "Set how **{entity_id}** syncs with the master list.",
+        "data": {
+          "direction": "Sync direction",
+          "delete_on_merge": "Delete from source after adding to master"
+        }
+      }
+    },
+    "error": {
+      "no_sources": "Please select at least one source list."
+    }
+  }
+}
