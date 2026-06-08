@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Opsæt List Merger",
+        "description": "Opret en samlet master todo-liste fra flere kilder.",
+        "data": {
+          "master_name": "Mergernavn",
+          "master_type": "Master liste-type",
+          "duplicate_handling": "Håndtering af dubletter",
+          "completed_behavior": "Når et emne markeres som fuldført på master"
+        },
+        "data_description": {
+          "master_name": "Navn vist i Home Assistant for denne merger (og for den nye liste hvis den oprettes).",
+          "delete_on_merge": "Fjern emnet fra kildelisten, når det tilføjes til master-listen."
+        }
+      },
+      "existing_master": {
+        "title": "Vælg master liste",
+        "description": "Vælg en eksisterende todo-liste som master liste.",
+        "data": {
+          "master_entity_id": "Master liste"
+        }
+      },
+      "select_sources": {
+        "title": "Vælg kildelister",
+        "description": "Vælg hvilke todo-lister der skal merges ind i master-listen.",
+        "data": {
+          "source_entities": "Kildelister"
+        }
+      },
+      "configure_source": {
+        "title": "Konfigurer kilde: {entity_id}",
+        "description": "Indstil hvordan **{entity_id}** synkroniseres med master-listen.",
+        "data": {
+          "direction": "Synkroniseringsretning",
+          "delete_on_merge": "Slet fra kilde efter tilføjelse til master"
+        }
+      }
+    },
+    "error": {
+      "no_sources": "Vælg mindst én kildeliste."
+    },
+    "abort": {
+      "already_configured": "Denne merger er allerede konfigureret."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opdater List Merger-indstillinger",
+        "data": {
+          "source_entities": "Kildelister",
+          "duplicate_handling": "Håndtering af dubletter",
+          "completed_behavior": "Når et emne markeres som fuldført på master"
+        }
+      },
+      "configure_source": {
+        "title": "Konfigurer kilde: {entity_id}",
+        "description": "Indstil hvordan **{entity_id}** synkroniseres med master-listen.",
+        "data": {
+          "direction": "Synkroniseringsretning",
+          "delete_on_merge": "Slet fra kilde efter tilføjelse til master"
+        }
+      }
+    },
+    "error": {
+      "no_sources": "Vælg mindst én kildeliste."
+    }
+  }
+}
